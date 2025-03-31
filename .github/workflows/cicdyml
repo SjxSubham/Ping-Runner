@@ -1,0 +1,22 @@
+name: Ping Her Every 6.9 minutes
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Don't Die Bro
+        run: |
+          curl -X GET https://dub.sh/mygithubapp
+          sleep 10
+
+      - name: Check out the repository to the runner
+        uses: actions/checkout@v4
+
+      - name: Run her script
+        run: ./scripts/pingHer.sh
