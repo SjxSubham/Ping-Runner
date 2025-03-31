@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Don't Die Bro
         run: |
-          curl -X GET https://dub.sh/mygithubapp
+          curl -X GET https://hangman-db4p.onrender.com
           sleep 10
 
       - name: Check out the repository to the runner
